@@ -9,11 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bookStore.model.Book_entity;
-import com.bookStore.repository.book_Repo;
 import com.bookStore.service.Book_Service;
 
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 public class Controller {
@@ -33,8 +31,13 @@ public class Controller {
 
 	@GetMapping("/Available_Books")
 	public ModelAndView getAllBooks() {
-		List<Book_entity>list = service.getAllBooks();
+		List<Book_entity> list = service.getAllBooks();
 		return new ModelAndView("bookList", "book", list);
+	}
+
+	@GetMapping("/myBook")
+	public String getMyBooks() {
+		return "My_Book";
 	}
 
 	@PostMapping("/save")
