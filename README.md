@@ -27,7 +27,7 @@ MySQL: As the relational database.
 Maven: For project management and dependency handling.
 
 Setup
-Clone the Repository: git clone https://github.com/yourusername/book-management-system.git
+Clone the Repository: git clone https://github.com/srujank1995/Book-Management-Spring.git
 Navigate to the Directory: cd book-management-system
 Configure Database: Set up a MySQL database and update the application.properties file with your database configurations.
 Run the Application: mvn spring-boot:run
