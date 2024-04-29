@@ -20,4 +20,9 @@ public class Book_Service {
 	public List<Book_entity> getAllBooks(){
 		return repo.findAll();
 	}
+	
+	public Book_entity getBookById(int id) {
+		return repo.findById(id).get();
+	}
+	
 }
